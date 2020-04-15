@@ -8,6 +8,7 @@ import { Document, Model, model, Schema } from "mongoose";
 export interface IVehicle extends Document {
   vehicle_speed: string;
   oil: string;
+  time: string;
 }
 
 const vehicleSchema: Schema = new Schema({
@@ -16,6 +17,10 @@ const vehicleSchema: Schema = new Schema({
     required: true,
   },
   oil:{
+    type: String,
+    required: true,
+  },
+  time:{
     type: String,
     required: true,
   },
